@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card {
+    position: relative;
+    width: 600px;
+    height: 350px;
+    margin: 20px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(45deg, #4444a1a6, #6666c9a6);
+}
+
+.container .card img {
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    right: 90px;
+    height: 390px;
+    transform: translate(-50%);
+    transition: 0.5s;
+}
+
+.container .card:hover img {
+    left: 50%;
+    height: 450px;
+}
+
+.container .card .content {
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 35px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .content {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+
+
+}
+
+.container .card .content h2 {
+    color: antiquewhite;
+    text-transform: uppercase;
+    font-size: 2.2em;
+    line-height: 1em;
+}
+
+.container .card .content p {
+    color: antiquewhite;
+}
+
+.container .card .content a {
+    position: relative;
+    color: black;
+    background-color: antiquewhite;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+    font-weight: 700px;
+}
+
+@media (max-width:991px) {
+    .container .card {
+        width: auto;
+        max-width: 600px;
+        align-items: flex-start;
+    }
+
+    .container .card:hover {
+        height: 550px;
+    }
+
+    .container .card:hover img {
+        left: 50%;
+        height: 300px;
+    }
+
+    .container .card .content {
+        width: 100%;
+        left: 0;
+        padding: 40px;
+
+    }
+}
+
+@media (max-width:991px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container .card {
+        margin: 40px 20px;
+    }
+
+}
+
+@media (max-width:420px) {
+
+    .container .card .content {
+        padding: 30px;
+    }
+
+    .container .card:hover img {
+        height: 300px;
+        left: 30%;
+    }
+
+    .container .card img {
+        width: 350px;
+    }
+}
